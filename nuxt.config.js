@@ -21,7 +21,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '@/assets/base.css',
+    '@/assets/base.css'
   ],
 
   loading: {
@@ -58,11 +58,18 @@ export default {
   },
 
   proxy: {
-    '/api/': process.env.NODE_ENV === 'production' ? '' : 'http://localhost:3030'
+    '/api/': process.env.NODE_ENV === 'production' ? 'https://admin.leituradolugar.arq.br' : 'http://localhost:3030'
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
+    meta: {
+      name: 'Leitura do Lugar',
+      description: 'Plataforma Leitura do Lugar, criada por PRAXIs - UFMG.',
+      theme_color: '#d37012',
+      lang: "pt-BR",
+      nativeUI: true
+    },
     manifest: {
       lang: 'pt-BR'
     }
