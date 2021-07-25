@@ -48,7 +48,8 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxt/image'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -67,7 +68,7 @@ export default {
       name: 'Leitura do Lugar',
       description: 'Plataforma Leitura do Lugar, criada por PRAXIs - UFMG.',
       theme_color: '#d37012',
-      lang: "pt-BR",
+      lang: 'pt-BR',
       nativeUI: true
     },
     manifest: {

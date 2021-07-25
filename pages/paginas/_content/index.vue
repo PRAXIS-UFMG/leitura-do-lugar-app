@@ -1,10 +1,13 @@
 <template>
-  <main class="px-6 m-2">
-    <article class="prose-sm prose-praxis">
+  <main class='px-6 m-2'>
+    <div class='flex justify-center my-6'>
+      <PraxisLogo class='mx-auto'/>
+    </div>
+    <article class='prose-sm prose-praxis'>
       <header>
-        <h2 class="title">{{ $data.title }}</h2>
+        <h2 class='title'>{{ $data.title }}</h2>
       </header>
-      <div v-html="$data.content"></div>
+      <div v-html='$data.content'></div>
     </article>
   </main>
 </template>
@@ -12,7 +15,7 @@
 <script>
 const ptToEnMap = {
   sobre: 'about_project',
-  equipe: 'team_and_aid',
+  equipe: 'team_and_aid'
 }
 
 export default {
@@ -22,7 +25,7 @@ export default {
       `/api/contents/${ptToEnMap[params.content]}.json`
     )
     return { content: response.article_rendered, title: response.title }
-  },
+  }
 }
 </script>
 

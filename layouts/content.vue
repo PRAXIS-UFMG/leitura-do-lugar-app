@@ -1,9 +1,7 @@
 <template>
-  <div class="app-container">
-    <div class="app-header">
-      <AppHeader />
-    </div>
-    <div class="app-content">
+  <div class='app-container'>
+    <Topbar />
+    <div class='app-content'>
       <Nuxt />
     </div>
   </div>
@@ -11,7 +9,8 @@
 
 <style scoped>
 .app-container {
-  @apply h-screen w-screen flex flex-col overflow-hidden;
+  @apply w-screen flex flex-col;
+  @apply px-4 overflow-hidden;
   @apply bg-white;
 }
 
@@ -20,6 +19,6 @@
 }
 
 .app-content {
-	@apply flex-grow overflow-y-scroll;
+  @apply flex-grow overflow-y-scroll;
 }
 </style>

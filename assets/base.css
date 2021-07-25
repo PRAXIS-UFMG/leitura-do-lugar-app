@@ -1,3 +1,7 @@
+:root {
+  font-family: "Helvetica Neue", Helvetica, sans-serif !important;
+}
+
 #__nuxt, #__layout {
-	@apply contents;
+  @apply contents;
 }
