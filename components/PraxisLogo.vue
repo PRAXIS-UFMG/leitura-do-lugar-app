@@ -1,5 +1,5 @@
 <template>
-  <nuxt-picture src='logo-praxis.png' sizes='sm:50vw md:128px lg:512px' class='mx-auto' />
+  <nuxt-picture src='logo-praxis.png' sizes='sm:50vw md:128px lg:256px' class='mx-auto' />
 </template>
 
 <script>

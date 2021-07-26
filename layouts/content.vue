@@ -1,6 +1,6 @@
 <template>
   <div class='app-container'>
-    <Topbar />
+    <Topbar context='content' />
     <div class='app-content'>
       <Nuxt />
     </div>
@@ -12,10 +12,6 @@
   @apply w-screen flex flex-col;
   @apply px-4 overflow-hidden;
   @apply bg-white;
-}
-
-.app-header {
-
 }
 
 .app-content {

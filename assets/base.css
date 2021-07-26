@@ -5,3 +5,13 @@
 #__nuxt, #__layout {
   @apply contents;
 }
+
+.link {
+  @apply underline hover:text-praxis-500;
+}
+
+.button-primary {
+  @apply py-3 px-3 text-white bg-praxis-500 uppercase tracking-tight leading-snug text-sm font-medium;
+  @apply hover:bg-praxis-400 active:bg-praxis-600;
+}
+

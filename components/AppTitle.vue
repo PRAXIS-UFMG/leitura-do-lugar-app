@@ -1,7 +1,5 @@
 <template>
-  <header>
-    <h1 class="text-center">
-      leitura <span class="font-bold">do lugar</span>
-    </h1>
-  </header>
+  <h1>
+    leitura&nbsp;<span class='font-bold'>do lugar</span>
+  </h1>
 </template>

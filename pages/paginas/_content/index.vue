@@ -1,9 +1,6 @@
 <template>
-  <main class='px-6 m-2'>
-    <div class='flex justify-center my-6'>
-      <PraxisLogo class='mx-auto'/>
-    </div>
-    <article class='prose-sm prose-praxis'>
+  <main class='mt-4 md:mt-16'>
+    <article class='prose sm:prose-sm prose-praxis mx-auto'>
       <header>
         <h2 class='title'>{{ $data.title }}</h2>
       </header>
