@@ -1,7 +1,7 @@
 <template>
   <main>
-    <div v-if='$store.state.tutorial' class='tutorial'>
-      <PraxisLogo class='md:hidden' />
+    <div class='tutorial'>
+      <nuxt-picture src='logo-praxis.png' sizes='sm:75vw md:50vw lg:256px' class='mx-auto lg:hidden' />
       <AppTitle class='lg:hidden text-3xl' />
       <p class='text-center leading-relaxed md:text-lg'>
         Utilize o menu na lateral esquerda para conhecer as narrativas enviadas.<br>
@@ -43,8 +43,8 @@ export default Vue.extend({
 
 <style scoped>
 .tutorial {
-  @apply w-full flex flex-col items-center gap-8 md:gap-16;
-  @apply mt-24 lg:mt-8;
+  @apply w-full flex flex-col items-center justify-center gap-8 md:gap-16;
+  @apply mt-16 md:mt-24 lg:mt-8;
 }
 
 .definitions {

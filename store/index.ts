@@ -1,21 +1,22 @@
 import { ActionTree, GetterTree, MutationTree } from 'vuex'
+import { getAccessorType } from 'typed-vuex'
 
-export const state = () => ({
-  tutorial: true
-})
+export const state = () => ({})
 
 export type RootState = ReturnType<typeof state>
 
-export const getters: GetterTree<RootState, RootState> = {
-  tutorial: state => state.tutorial
-}
+export const getters: GetterTree<RootState, RootState> = {}
 
-export const mutations: MutationTree<RootState> = {
-  CLEAR_TUTORIAL: (state) => (state.tutorial = false)
-}
+export const mutations: MutationTree<RootState> = {}
 
-export const actions: ActionTree<RootState, RootState> = {
-  clearTutorial({ commit }) {
-    commit('CLEAR_TUTORIAL')
+export const actions: ActionTree<RootState, RootState> = {}
+
+export const accessorType = getAccessorType({
+  state,
+  getters,
+  mutations,
+  actions,
+  modules: {
+    // The key (submodule) needs to match the Nuxt namespace (e.g. ~/store/submodule.ts)
   }
-}
+})
