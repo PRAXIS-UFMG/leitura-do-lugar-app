@@ -1,13 +1,13 @@
 <template>
-  <div class='app-container'>
-    <Topbar context='content' />
-    <div class='app-content'>
+  <div class="app-container">
+    <Topbar context="content" />
+    <div class="app-content">
       <Nuxt />
     </div>
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="postcss">
 .app-container {
   @apply w-screen flex flex-col;
   @apply px-4 overflow-hidden;
