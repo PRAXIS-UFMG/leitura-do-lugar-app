@@ -8,7 +8,7 @@
 
 <style scoped>
 .app-container {
-  @apply grid w-screen lg:h-screen px-4;
+  @apply grid w-screen lg:h-screen;
   grid-template-columns: auto 1fr;
   grid-template-rows: auto 1fr;
   grid-template-areas:

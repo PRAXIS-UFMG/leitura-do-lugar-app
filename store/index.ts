@@ -38,7 +38,7 @@ export const actions: ActionTree<RootState, RootState> = {
     }), {})) // js é... muito feio
   },
   setControl({ commit, state }, { group, property, value }) {
-    if (group === 'supports') {
+    if (group === 'supports' && value === true) {
       const supportsDisable = Object.keys(state.supports).filter(k => k !== property)
       for (const support of supportsDisable)
         commit('setControl', { group, property: support, value: false })

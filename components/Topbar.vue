@@ -23,6 +23,6 @@ export default Vue.extend({
 
 <style scoped>
 .topbar {
-  @apply py-4 grid grid-cols-2 lg:grid-cols-3 pl-4 items-baseline;
+  @apply py-4 pr-4 grid grid-cols-2 lg:grid-cols-3 pl-4 items-baseline;
 }
 </style>
