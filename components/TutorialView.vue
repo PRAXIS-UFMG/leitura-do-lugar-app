@@ -26,6 +26,7 @@
       <button class='button-primary w-48'>ver narrativas <br>e linhas de análise</button>
       <button class='button-primary w-48' @click='openMap'>ver narrativas <br>no mapa</button>
     </div>
+    <img src='https://leituradolugar.com.br/apoio-leituradolugar.png'>
   </div>
 </template>
 
