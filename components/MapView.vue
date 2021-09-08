@@ -17,8 +17,8 @@ export default Vue.extend({
     // url: 'https://{s}.tile.thunderforest.com/mobile-atlas/{z}/{x}/{y}.png',
     url: 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
     attribution: '&copy; contribuidores <a target="_blank" href="http://osm.org/copyright">OpenStreetMap</a>',
-    // center: [-19.8137125, -43.9401725] // Bairro Mariquinhas, BH
-    center: [-19.9247069, -43.9665991]
+    center: [-19.8137125, -43.9401725] // Bairro Mariquinhas, BH
+    // center: [-19.9247069, -43.9665991]
   }),
   computed: {
     markers() {
