@@ -28,7 +28,9 @@
       "@nuxt/types",
       "@nuxtjs/axios",
       "@nuxt/image",
-      "@types/node"
+      "@types/node",
+      "@nuxt/vue-app",
+      "nuxt-leaflet"
     ]
   },
   "exclude": [

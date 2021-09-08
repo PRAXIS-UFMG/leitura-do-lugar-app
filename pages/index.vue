@@ -11,6 +11,7 @@ import Vue from 'vue'
 export default Vue.extend({
   async asyncData({ store }) {
     await store.dispatch('fetchControls')
+    await store.dispatch('fetchNarratives')
   },
   computed: {
     showTutorial() {

@@ -5,12 +5,10 @@ declare module '@vue-hero-icons/solid/*' {
   export default content
 }
 
-declare module '@vue-hero-icons/outline' {
-}
-
 declare module '@vue-hero-icons/solid' {
   export { default as MenuIcon } from '@vue-hero-icons/solid/icons/MenuIcon'
-  export { default as SearchIcon } from '@vue-hero-icons/solid/icons/SearchIcon'
+  export { default as ChatAltIcon } from '@vue-hero-icons/solid/icons/ChatAltIcon'
   export { default as XIcon } from '@vue-hero-icons/solid/icons/XIcon'
-  // rest of solid icons
+  export { default as ClockIcon } from '@vue-hero-icons/solid/icons/ClockIcon'
+  export { default as UserIcon } from '@vue-hero-icons/solid/icons/UserIcon'
 }

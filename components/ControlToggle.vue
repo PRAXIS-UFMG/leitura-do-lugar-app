@@ -2,7 +2,7 @@
   <label class='container'>
     <span class='label'>{{ title }}</span>
     <div class='relative text-xs lg:text-sm'>
-      <input v-model='value' type='checkbox' class='sr-only' />
+      <input v-model='value' type='checkbox' :disabled='readonly' class='sr-only' />
       <div class='line'></div>
       <div class='dot'></div>
     </div>
@@ -20,6 +20,9 @@ export default Vue.extend({
   computed: {
     title() {
       return this.$store.state[this.toggleGroup][this.control].name
+    },
+    readonly() {
+      return this.$store.state[this.toggleGroup][this.control].readonly
     },
     value: {
       get() {
