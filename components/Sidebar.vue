@@ -10,22 +10,9 @@
         </button>
       </div>
       <div class='controls'>
-        <ControlGroup title='narrativas' :toggles="[
-          { name: 'Textos', property: 'narrativeTexts' },
-          { name: 'Imagens', property: 'narrativeImages' },
-          { name: 'Vídeos', property: 'narrativeVideos' },
-          { name: 'Áudios', property: 'narrativeAudios' }
-          ]" />
-        <ControlGroup title='suportes' :toggles="[
-          { name: 'Linha do Tempo', property: 'supportTimeline' },
-          { name: 'Mapa', property: 'supportMap' },
-          { name: 'Linhas de Análise', property: 'supportLineAnalyses' }
-        ]" />
-        <ControlGroup title='linhas de análise' :toggles="[
-          { name: 'Pressão Socioeconômica', property: 'linePressure' },
-          { name: 'Vulnerabilidade', property: 'lineVulnerability' },
-          { name: 'Percursos', property: 'lineRoutes' },
-        ]" />
+        <ControlGroup title='narrativas' toggle-group='narratives' />
+        <ControlGroup title='suportes' toggle-group='supports' />
+        <ControlGroup title='linhas de análise' toggle-group='lineAnalyses' />
       </div>
     </div>
   </div>
@@ -41,7 +28,12 @@ export default Vue.extend({
   },
   data: () => ({
     isOpen: false
-  })
+  }),
+  computed: {
+    supports() {
+      return this.$store.state.supports
+    }
+  }
 })
 </script>
 

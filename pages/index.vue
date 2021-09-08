@@ -1,6 +1,6 @@
 <template>
   <main>
-    <div class='tutorial'>
+    <div v-if='showTutorial' class='tutorial'>
       <nuxt-picture src='logo-praxis.png' sizes='sm:75vw md:50vw lg:256px' class='mx-auto lg:hidden' />
       <AppTitle class='lg:hidden text-3xl' />
       <p class='text-center leading-relaxed md:text-lg'>
@@ -31,13 +31,19 @@
   </main>
 </template>
 
-<script lang='ts'>
+<script>
 import Vue from 'vue'
 
 export default Vue.extend({
-  data: () => ({
-    opened: false
-  })
+  async asyncData({ store }) {
+    await store.dispatch('fetchControls')
+  },
+  computed: {
+    showTutorial() {
+      const supports = this.$store.state.supports
+      return !Object.values(supports).some(s => s.value)
+    }
+  }
 })
 </script>
 

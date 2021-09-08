@@ -4,8 +4,12 @@
       <h3>{{ title }}</h3>
     </header>
     <div class='toggles'>
-      <ControlToggle v-for='toggle in toggles' :key='toggle.property' :title='toggle.name'
-                     :property='toggle.property' />
+      <ControlToggle
+        v-for='controlKey of groupKeys'
+        :key='controlKey'
+        :toggle-group='toggleGroup'
+        :control='controlKey'
+      />
     </div>
   </div>
 </template>
@@ -17,7 +21,12 @@ import Vue from 'vue'
 export default Vue.extend({
   props: {
     title: String,
-    toggles: Array
+    toggleGroup: String
+  },
+  computed: {
+    groupKeys() {
+      return Object.keys(this.$store.state[this.toggleGroup])
+    }
   }
 })
 </script>

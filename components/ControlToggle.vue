@@ -2,7 +2,7 @@
   <label class='container'>
     <span class='label'>{{ title }}</span>
     <div class='relative text-xs lg:text-sm'>
-      <input v-model='propertyStore' type='checkbox' class='sr-only' />
+      <input v-model='value' type='checkbox' class='sr-only' />
       <div class='line'></div>
       <div class='dot'></div>
     </div>
@@ -14,15 +14,19 @@ import Vue from 'vue'
 
 export default Vue.extend({
   props: {
-    title: { required: true, type: String },
-    property: { required: true, type: String }
+    toggleGroup: { required: true, type: String },
+    control: { required: true, type: String }
   },
   computed: {
-    propertyStore: {
+    title() {
+      return this.$store.state[this.toggleGroup][this.control].name
+    },
+    value: {
       get() {
-        return this.property
+        return this.$store.state[this.toggleGroup][this.control].value
       },
       set(value) {
+        this.$store.dispatch('setControl', { group: this.toggleGroup, property: this.control, value })
       }
     }
   }
