@@ -37,6 +37,6 @@
 
 .main-app {
   grid-area: main-app;
-  @apply flex items-stretch justify-center;
+  @apply flex items-stretch justify-center overflow-scroll;
 }
 </style>

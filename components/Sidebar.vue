@@ -49,6 +49,6 @@ export default Vue.extend({
 }
 
 .controls {
-  @apply h-full mb-8 mr-12 ml-6 lg:mx-0 flex flex-col justify-evenly gap-12 overflow-y-scroll;
+  @apply h-full mb-8 mr-12 ml-6 lg:mx-0 flex flex-col gap-12 overflow-y-scroll;
 }
 </style>

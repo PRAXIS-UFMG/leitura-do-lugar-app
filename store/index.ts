@@ -43,12 +43,14 @@ export const actions: ActionTree<RootState, RootState> = {
     }), {})) // js é... muito feio
   },
   setControl({ commit, state }, { group, property, value }) {
-    if (property !== 'texts' && property !== 'map') return
-    if (group === 'supports' && value === true) {
+    if (property !== 'texts' && property !== 'map') return // TODO: implement filters
+
+    if (group === 'supports' && value === true) { // Toggle all other supports when enabling one
       const supportsDisable = Object.keys(state.supports).filter(k => k !== property)
       for (const support of supportsDisable)
         commit('setControl', { group, property: support, value: false })
     }
+
     commit('setControl', { group, property, value })
   },
   async fetchNarratives({ commit }) {
